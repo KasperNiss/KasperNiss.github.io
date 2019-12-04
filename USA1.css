@@ -1,0 +1,40 @@
+ul{
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  width: 120%;
+}
+
+li{
+  float: left;
+}
+
+li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.activeNAV{
+  background-color: #ff8800;
+}
+
+h1 {
+color: #ff8800;
+font-family: Comic Sans MS;
+text-align: center;
+font-size: 60px;
+}
+
+body {
+  background-color: powderblue;
+}
