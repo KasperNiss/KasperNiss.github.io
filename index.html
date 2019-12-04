@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="dk">
+  <head>
+      <title>Kaspers informatik hjemmeside</title>
+      <link rel="stylesheet" type="text/css" href="hjemmesideCSS.css">
+  </head>
+  <body>
+
+    <h1>Rysensteen møder USA</h1>
+
+    <ul>
+      <li><a class="activeNAV" href="file:///Users/kasperniss/Desktop/Skole/Gym/2017y/Informatik/USA.html">Home</a></li>
+      <li><a class="activeNAV" href="file:///Users/kasperniss/Desktop/Skole/Gym/2017y/Informatik/USA1.html">USA</a></li>
+      <li><a class="activeNAV" href="file:///Users/kasperniss/Desktop/Skole/Gym/2017y/Informatik/GCP.html">GCP </a></li>
+    </ul>
+
+    <div style="padding:20px;margin-top: 30px;height:1500px;">
+
+    <!-- Image slideshow-->
+      <div class="Slideshow">
+
+        <div class="MineSlides fade">
+          <div class="nummertekst"> 1 /3 </div>
+          <img  src="https://www.bostonherald.com/wp-content/uploads/2019/09/skylinejfm003.jpg?w=524" style="width: 100%; height: 451px">
+          <div class="text">Boston</div>
+        </div>
+
+      <div class="MineSlides fade">
+        <div class="nummertekst"> 2 /3 </div>
+        <img  src="https://www.omnihotels.com/-/media/images/hotels/bospar/destinations/bospar-boston-common.jpg?h=660&la=en&w=1170" style="width: 100%; height: 451px">
+        <div class="text">Boston Common</div>
+      </div>
+
+    <div class="MineSlides fade">
+      <div class="nummertekst"> 3 /3 </div>
+      <img  src="http://news.mit.edu/sites/mit.edu.newsoffice/files/styles/news_article_image_top_slideshow/public/images/2018/MIT-Computer-Announce-01_0.jpg?itok=nDI5_kh0" style="width:100%; height: 451px">
+      <div class="text">MIT</div>
+    </div>
+
+    <a class="prev" onclick="PlusSlides (-1)">&#10094; </a>
+    <a class="next" onclick="PlusSlides (1)">&#10095; </a>
+
+   </div>
+   <br>
+
+   <div style="text-align:center">
+     <span class="dot" onclick="CurrentSlide(1)"></span>
+     <span class="dot" onclick="CurrentSlide(2)"></span>
+     <span class="dot" onclick="CurrentSlide(3)"></span>
+  </div>
+
+  <script>
+  var SlideIndex = 1;
+  ShowSlides(SlideIndex);
+
+  function PlusSlides(n) {
+    ShowSlides(SlideIndex += n);
+  }
+
+  function CurrentSlide(n) {
+    ShowSlides(SlideIndex = n);
+  }
+
+  function ShowSlides(n){
+    var i;
+    var slides = document.getElementsByClassName("MineSlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {SlideIndex = 1}
+    if (n < 1) {SlideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i <dots.length; i++) {
+      dots[i].className = dots[i].className.replace("active","");
+    }
+    slides[SlideIndex-1].style.display = "block";
+    dots[SlideIndex-1].clasName += "active";
+  }
+  </script>
+  </body>
+</html>

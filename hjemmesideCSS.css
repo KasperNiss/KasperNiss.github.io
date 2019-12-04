@@ -1,0 +1,156 @@
+body {
+background-color: powderblue;
+}
+
+h1 {
+color: #ff8800;
+font-family: Comic Sans MS;
+text-align: center;
+font-size: 60px;
+}
+
+h3 {
+  color: #ff8800;
+}
+
+p {
+color: #ff8800;
+}
+
+#li1{
+  font-family: monospace;
+  color: black;
+}
+
+hr{
+  height: 0.1rem;
+  background-color: black;
+}
+
+
+
+ul{
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  width: 120%;
+}
+
+li{
+  float: left;
+}
+
+li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.activeNAV{
+  background-color: #ff8800;
+}
+
+.BostonList{
+  padding:0px;
+  margin: 0px;
+}
+
+.TaborList{
+  padding: 0px;
+  margin: 0px;
+}
+
+.Slideshow{
+  width: 800px;
+  height: 500px;
+
+  position: relative;
+  margin: auto;
+}
+
+.MineSlides {
+  display: none;
+}
+
+.prev, .next{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next{
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text{
+  color: black;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.nummertekst{
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot{
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover{
+  background-color: #717171;
+}
+
+.fade{
+  -webkit-animation-name: fade;
+ -webkit-animation-duration: 1.5s;
+ animation-name: fade;
+ animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
